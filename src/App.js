@@ -4,7 +4,7 @@ import "bootstrap/dist/js/bootstrap";
 import React, {useEffect, useState} from "react"
 import { Card } from './components/Card/Card';
 import { Search } from './components/Search/Search'
-
+import { Pagination } from './components/Pagination/Pagination';
 
 
 function App() {
@@ -22,6 +22,7 @@ function App() {
   }, [api])
   
   return (
+    <>
     <div className = "App">
       <h1 className='text-center mb-3'>Characters</h1>
       <Search setSearch={setSearch} setPageNumber={setPageNumber} />
@@ -35,7 +36,9 @@ function App() {
         </div>
       </div>
       </div>
+      <Pagination info={info} pageNumber={pageNumber} setPageNumber={setPageNumber} />
     </div>
+    </>
   );
 }
 
