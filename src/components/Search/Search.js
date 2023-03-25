@@ -12,8 +12,10 @@ export const Search = ({setSearch, setPageNumber}) => {
         </form>
 
         <input onChange={(e) => {setPageNumber(1); setSearch(e.target.value)}} placeholder="Search Your Charater" className={`${styles.input}`} type="text"/>
-
-        <button onClick={searchBtn} className={`${styles.btn} mx-2 my-4 btn btn-primary fs-5`}>Search</button>
+        <div>
+            <button onClick={searchBtn} className={`${styles.btn} my-4 btn btn-primary fs-5`}>Search</button>
+        </div>
+        
         </>
     )
 };
